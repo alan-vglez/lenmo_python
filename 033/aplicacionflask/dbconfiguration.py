@@ -1,5 +1,5 @@
 from app import app
-from flask import MySQL
+from flaskext.mysql import MySQL
 
 #Configuracion de MySQL
 app.config['MYSQL_HOST'] = 'localhost'
@@ -8,4 +8,4 @@ app.config['MYSQL_PASSWORD'] = 'AstreqasRibiag_27.'
 app.config['MYSQL_DB'] = 'usuario'
 
 mysql = MySQL()
-mysql.innit_app(app)
+mysql.init_app(app)

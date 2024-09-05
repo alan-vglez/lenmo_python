@@ -6,20 +6,23 @@
     <body>
         <h1>Agregar datos de usuario</h1>
         <form action="{{ url_for('submit') }}" method="post">
+            <label for="id">ID de usuario:</label>
+            <input type="number" id="id" name="UsuarioID" required><br><br>
+
             <label for="primer_nombre">Primer nombre:</label>
-            <input type="text" id="primer_nombre" name="primer_nombre" required><br><br>
+            <input type="text" id="primer_nombre" name="PrimerNombre" required><br><br>
 
             <label for="segundo_nombre">Segundo nombre:</label>
-            <input type="text" id="segundo_nombre" name="segundo_nombre" required><br><br>
+            <input type="text" id="segundo_nombre" name="SegundoNombre" required><br><br>
 
             <label for="nacimiento">Nacimiento:</label>
-            <input type="number" id="nacimiento" name="nacimiento" required><br><br>
+            <input type="number" id="nacimiento" name="Nacimiento" required><br><br>
 
             <label for="edad">Edad:</label>
-            <input type="number" id="edad" name="edad" required><br><br>
+            <input type="number" id="edad" name="Edad" required><br><br>
 
-            <label for="Genero">Genero:</label>
-            <input type="text" id="genero" name="genero" required><br><br>
+            <label for="genero">Genero:</label>
+            <input type="text" id="genero" name="Genero" required><br><br>
 
             <input type="submit" value="Submit">
         </form>

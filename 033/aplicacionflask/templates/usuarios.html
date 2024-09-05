@@ -7,14 +7,16 @@
         <h1>Usuarios</h1>
         <table border="1">
             <tr>
+                <th>ID</th>
                 <th>Primer nombre</th>
                 <th>Segundo nombre</th>
                 <th>Nacimiento</th>
                 <th>Edad</th>
                 <th>Genero</th>
             </tr>
-            {% for usuarios in usuarios %}
+            {% for usuario in usuarios %}
             <tr>
+                <td>{{ usuario.id }}</td>
                 <td>{{ usuario.primer_nombre }}</td>
                 <td>{{ usuario.segundo_nombre }}</td>
                 <td>{{ usuario.nacimiento }}</td>
