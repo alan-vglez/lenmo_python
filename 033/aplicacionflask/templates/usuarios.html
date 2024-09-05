@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listado</title>
+    </head>
+    <body>
+        <h1>Usuarios</h1>
+        <table border="1">
+            <tr>
+                <th>Primer nombre</th>
+                <th>Segundo nombre</th>
+                <th>Nacimiento</th>
+                <th>Edad</th>
+                <th>Genero</th>
+            </tr>
+            {% for usuarios in usuarios %}
+            <tr>
+                <td>{{ usuario.primer_nombre }}</td>
+                <td>{{ usuario.segundo_nombre }}</td>
+                <td>{{ usuario.nacimiento }}</td>
+                <td>{{ usuario.edad }}</td>
+                <td>{{ usuario.genero }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{{ url_for('index') }}">Agregar otro usuario</a>
+    </body>
+</html>

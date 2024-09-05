@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nuevo usuario</title>
+    </head>
+    <body>
+        <h1>Agregar datos de usuario</h1>
+        <form action="{{ url_for('submit') }}" method="post">
+            <label for="primer_nombre">Primer nombre:</label>
+            <input type="text" id="primer_nombre" name="primer_nombre" required><br><br>
+
+            <label for="segundo_nombre">Segundo nombre:</label>
+            <input type="text" id="segundo_nombre" name="segundo_nombre" required><br><br>
+
+            <label for="nacimiento">Nacimiento:</label>
+            <input type="number" id="nacimiento" name="nacimiento" required><br><br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required><br><br>
+
+            <label for="Genero">Genero:</label>
+            <input type="text" id="genero" name="genero" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <a href="{{ url_for('show') }}">Ver usuarios</a>
+    </body>
+</html>
