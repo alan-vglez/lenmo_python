@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eliminar usuario</title>
+    </head>
+    <body>
+        <h1>Eliminar datos de usuario</h1>
+        <form action="{{ url_for('delete') }}" method="post">
+            <label for="id_usuario">ID de usuario:</label>
+            <input type="number" id="id_usuario" name="UsuarioID" required><br><br>
+
+            <input type="submit" value="Eliminar">
+        </form>
+        <br>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <br>
+        <a href="{{ url_for('index') }}">Agregar usuario</a>
+        <br>
+        <a href="{{ url_for('actualizar') }}">Actualizar usuario</a>
+        <br>        
+        <a href="{{ url_for('show') }}">Ver usuarios</a>
+    </body>
+</html>

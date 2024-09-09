@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Nuevo usuario</title>
+        <title>Actualizar usuario</title>
     </head>
     <body>
-        <h1>Agregar datos de usuario</h1>
-        <form action="{{ url_for('submit') }}" method="post">
+        <h1>Actualizar datos de usuario</h1>
+        <form action="{{ url_for('update') }}" method="post">
             <label for="id_usuario">ID de usuario:</label>
             <input type="number" id="id_usuario" name="UsuarioID" required><br><br>
 
@@ -24,19 +24,21 @@
             <label for="genero">Genero:</label>
             <input type="text" id="genero" name="Genero" required><br><br>
 
-            <input type="submit" value="Agregar">
+            <input type="submit" value="Actualizar">
         </form>
         <br>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
-                <p>{{ message }}</p>
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
             {% endif %}
         {% endwith %}
         <br>
-        <a href="{{ url_for('show') }}">Ver usuarios</a>
+        <a href="{{ url_for('index') }}">Agregar usuario</a>
         <br>
         <a href="{{ url_for('eliminar') }}">Eliminar usuario</a>
-        <br>
-        <a href="{{ url_for('actualizar') }}">Actualizar usuario</a>
+        <br>        
+        <a href="{{ url_for('show') }}">Ver usuarios</a>
     </body>
 </html>
