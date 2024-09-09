@@ -73,6 +73,9 @@ def delete():
     finally:
         if cursor: cursor.close()
         if conn: conn.close()
+        print("Eliminado exitosamente!")
+        return redirect(url_for('show'))
+
     
 @app.route('/actualizar')
 def actualizar():
@@ -104,7 +107,9 @@ def update():
     finally:
         if cursor: cursor.close()
         if conn: conn.close()
-        
+        print("Actualizado correctamente!")
+        return redirect(url_for('show'))
+            
 if __name__ == '__main__':
     app.debug = True
     app.run()
